@@ -103,4 +103,12 @@ public class MusicOrganizer
             System.out.println("Error. No hay archivos para esta busqueda.");
         }
     }
+    
+    public void playSamplesArtist(String nombreArtista) {
+        for (String filename : files) {
+            if (filename.contains(nombreArtista)) {
+                player.playSample(filename);
+            }
+        }
+    }
 }
